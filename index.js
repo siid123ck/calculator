@@ -25,6 +25,8 @@ buttons.forEach(btn=>{
         btn.addEventListener("click", dotValue)
     }  else if(btn.classList.contains("zero")) {
         btn.addEventListener("click", ()=>getValue(btn.value))
+    } else if(btn.classList.contains("pn")) {
+        btn.addEventListener("click", ()=>isPositive(btn.value))
     } 
 })
 
@@ -33,9 +35,11 @@ function getValue(number){
     if(waitSyncNext){
         calculatorResult.textContent=number;
         waitSyncNext=false;
-    } else{
+    } 
+     else{
     const displayValue = calculatorResult.textContent;
-    calculatorResult.textContent=displayValue==="0"?number:displayValue+number;
+   
+    calculatorResult.textContent=(displayValue==="0")?number:displayValue+number;
     }
 }
 
@@ -77,3 +81,13 @@ function useOperator(operator){
     waitSyncNext = true;
     operatorValue = operator;
 } 
+
+function isPositive(value){
+    console.log(value)
+
+    if(!calculatorResult.textContent.includes("-")){
+        calculatorResult.textContent =("-").concat(calculatorResult.textContent);
+    } else {
+        calculatorResult.textContent =calculatorResult.textContent.substr(1);
+    }
+}
