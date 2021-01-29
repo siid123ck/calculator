@@ -5,9 +5,14 @@ body {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #61045F, #AA076B);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 20px;
 }
 
 .calculator {
+  width: 500px;
+  height: auto;
+  padding-bottom: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   margin: auto;
   display: flex;
   align-items: center;
@@ -21,24 +26,29 @@ body {
   letter-spacing: 4px;
 }
 .calculator-display {
-  width: 500px;
-  height: 500px;
+  min-width: 400px;
+  min-height: 400px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 .calculator-display button {
   color: white;
+  cursor: pointer;
   background-color: rgba(0, 0, 0, 0.537);
   font-size: 35px;
   width: 80px;
   height: 80px;
   text-transform: uppercase;
   border-radius: 50%;
+  margin: 5px;
   border: none;
+}
+.calculator-display button:focus {
+  outline: none;
 }
 .calculator .zero {
   grid-column: 1/span 2;
-  width: 200px;
+  width: 180px;
   border-radius: 100px;
 }
 .calculator .ac, .calculator .pn, .calculator .percentage {

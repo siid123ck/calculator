@@ -2,11 +2,15 @@ body{
     background: #AA076B;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #61045F, #AA076B);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+padding: 20px;
 
 }
 
 .calculator{
-    
+    width: 500px;
+    height: auto;
+    padding-bottom: 20px;
+    box-shadow: 0 20px 40px rgba($color: #000000, $alpha: .30);
     margin: auto;
     display: flex;
     align-items: center;
@@ -19,19 +23,23 @@ background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, F
      letter-spacing: 4px;
   }
     &-display{
-        width: 500px;
-        height: 500px;
+        min-width: 400px;
+        min-height: 400px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
        button{
+           &:focus{
+               outline: none;
+           }
         color: white;
+        cursor: pointer;
         background-color: rgba(0, 0, 0, 0.537);
            font-size: 35px;
            width: 80px;
            height: 80px;
            text-transform: uppercase;
            border-radius: 50%;
-        //    margin: 5px;
+           margin: 5px;
            border: none;
 
        }
@@ -39,7 +47,7 @@ background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, F
 
     .zero{
         grid-column: 1/span 2;
-        width: 200px;
+        width: 180px;
         border-radius: 100px;
     }
 
@@ -50,4 +58,6 @@ background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, F
     .division, .multi, .plus, .minus, .equal{
         background: #ff8d2f;  /* fallback for old browsers */
    }
+
+  
 }
