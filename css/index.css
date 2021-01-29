@@ -1,5 +1,53 @@
 body {
-  color: blue;
+  background: #AA076B;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #61045F, #AA076B);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #61045F, #AA076B);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.calculator {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: white;
+}
+.calculator h2 {
+  letter-spacing: 4px;
+}
+.calculator-display {
+  width: 500px;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.calculator-display button {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.537);
+  font-size: 35px;
+  width: 80px;
+  height: 80px;
+  text-transform: uppercase;
+  border-radius: 50%;
+  border: none;
+}
+.calculator .zero {
+  grid-column: 1/span 2;
+  width: 200px;
+  border-radius: 100px;
+}
+.calculator .ac, .calculator .pn, .calculator .percentage {
+  background-color: rgba(255, 255, 255, 0.685);
+  color: black;
+}
+.calculator .division, .calculator .multi, .calculator .plus, .calculator .minus, .calculator .equal {
+  background: #ff8d2f;
+  /* fallback for old browsers */
 }
 
 /*# sourceMappingURL=index.css.map */
