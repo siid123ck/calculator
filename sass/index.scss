@@ -8,7 +8,10 @@ padding: 20px;
 
 .calculator{
     width: 500px;
-    height: auto;
+    @media screen and (max-width:550px) {
+        width: 400px;
+    }
+    height: auto; 
     padding-bottom: 20px;
     box-shadow: 0 20px 40px rgba($color: #000000, $alpha: .30);
     margin: auto;
@@ -25,6 +28,7 @@ padding: 20px;
     &-display{
         min-width: 400px;
         min-height: 400px;
+      
         display: grid;
         grid-template-columns: repeat(4, 1fr);
        button{
@@ -37,6 +41,11 @@ padding: 20px;
            font-size: 35px;
            width: 80px;
            height: 80px;
+           @media screen and (max-width:550px) {
+            font-size: 25px;
+           width: 60px;
+           height: 60px;
+        }
            text-transform: uppercase;
            border-radius: 50%;
            margin: 5px;
@@ -49,6 +58,10 @@ padding: 20px;
         grid-column: 1/span 2;
         width: 180px;
         border-radius: 100px;
+        @media screen and (max-width:550px){
+            width: 160px;
+        }
+        
     }
 
     .ac, .pn, .percentage{
