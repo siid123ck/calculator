@@ -7,6 +7,14 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   padding: 20px;
 }
+@media screen and (max-width: 550px) {
+  body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+  }
+}
 
 .calculator {
   width: 500px;
@@ -24,7 +32,9 @@ body {
 }
 @media screen and (max-width: 550px) {
   .calculator {
-    width: 400px;
+    width: 100%;
+    margin: 0;
+    height: 100vh;
   }
 }
 .calculator h2 {
@@ -39,6 +49,9 @@ body {
 .calculator-display button {
   color: white;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgba(0, 0, 0, 0.537);
   font-size: 35px;
   width: 80px;

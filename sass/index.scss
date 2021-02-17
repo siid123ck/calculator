@@ -3,13 +3,20 @@ body{
 background: -webkit-linear-gradient(to right, #61045F, #AA076B);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #61045F, #AA076B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 padding: 20px;
-
+@media screen and (max-width:550px) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
 }
 
 .calculator{
     width: 500px;
     @media screen and (max-width:550px) {
-        width: 400px;
+        width: 100%;
+        margin: 0;
+        height: 100vh;
     }
     height: auto; 
     padding-bottom: 20px;
@@ -37,6 +44,9 @@ padding: 20px;
            }
         color: white;
         cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: rgba(0, 0, 0, 0.537);
            font-size: 35px;
            width: 80px;
